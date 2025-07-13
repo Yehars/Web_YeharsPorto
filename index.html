@@ -22,6 +22,7 @@
             position: relative; /* Needed for z-index */
             z-index: 20; /* Ensure header is above main content's overlap */
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+            transition: background-image 0.5s ease; /* Smooth transition for color change */
         }
         .card {
             background-color: #fff;
@@ -40,7 +41,7 @@
             padding: 10px 20px;
             border-radius: 8px;
             text-decoration: none;
-            transition: background-color 0.2s ease-in-out;
+            transition: background-color 0.2s ease-in-out; /* Smooth transition for color change */
         }
         .btn-primary:hover {
             background-color: #5a9bc8; /* Darker shade on hover */
@@ -57,6 +58,7 @@
             border-radius: 6px;
             font-size: 0.875rem;
             font-weight: 600;
+            transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out; /* Smooth transition for color change */
         }
 
         /* Main Content Wrapper for continuous gradient */
@@ -66,12 +68,14 @@
             position: relative; /* Needed for z-index */
             z-index: 10; /* Ensure main content is below header but above body */
             padding-top: 50px; /* Add padding to compensate for negative margin */
+            transition: background-image 0.5s ease; /* Smooth transition for color change */
         }
 
         /* Footer: Dark Blue to Light Blue Gradient (same as header) */
         footer {
             background-color: #06285A; /* Dark blue base */
             background-image: linear-gradient(to right, #06285A, #6caddf); /* Dark blue to light blue */
+            transition: background-image 0.5s ease; /* Smooth transition for color change */
         }
 
         /* Carousel specific styles */
@@ -144,7 +148,7 @@
 </head>
 <body class="antialiased">
     <!-- Header Section -->
-    <header class="header-bg text-white py-16 px-4 shadow-md">
+    <header class="header-bg text-white py-16 px-4 shadow-md" id="mainHeader">
         <div class="max-w-4xl mx-auto text-center">
             <!-- Language Selection Buttons -->
             <div class="flex justify-center space-x-4 mb-4">
@@ -158,7 +162,7 @@
 
             <h1 class="text-5xl font-extrabold mb-4" data-key="name">Yehars Danish Ivan Nanlohy</h1>
             <p class="text-xl font-light mb-6" data-key="tagline">Mahasiswa Sistem Informasi dengan passion dalam UI/UX, Data Analyst, dan Graphic Design.</p>
-            <div class="flex justify-center space-x-4">
+            <div class="flex justify-center flex-wrap gap-4"> <!-- Added flex-wrap and gap-4 -->
                 <a href="mailto:yeharsdi@gmail.com" class="btn-primary flex items-center">
                     <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                     <span data-key="emailMe">Email Saya</span>
@@ -176,7 +180,7 @@
     </header>
 
     <!-- Main Content Wrapper for continuous gradient -->
-    <main>
+    <main id="mainContent">
         <!-- About Section -->
         <section id="about" class="py-16 px-4">
             <div class="max-w-4xl mx-auto card p-8">
@@ -446,7 +450,7 @@
             <div class="max-w-4xl mx-auto card p-8 text-center">
                 <h2 class="text-3xl section-title mb-6" data-key="contactMeTitle">Hubungi Saya</h2>
                 <p class="text-lg text-gray-700 mb-6" data-key="contactMeDesc">Tertarik untuk berkolaborasi atau memiliki pertanyaan? Jangan ragu untuk menghubungi saya!</p>
-                <div class="flex justify-center space-x-6">
+                <div class="flex justify-center flex-wrap gap-4"> <!-- Added flex-wrap and gap-4 -->
                     <a href="mailto:yeharsdi@gmail.com" class="btn-primary flex items-center">
                         <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                         yeharsdi@gmail.com
@@ -465,7 +469,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-8 px-4 text-center rounded-t-lg">
+    <footer class="bg-gray-800 text-white py-8 px-4 text-center rounded-t-lg" id="mainFooter">
         <p data-key="footerText">&copy; 2025 Yehars Danish Ivan Nanlohy. All rights reserved.</p>
     </footer>
 
@@ -603,7 +607,7 @@
                 projectAITitle: 'AI時代の仕事の展望分析',
                 projectAIDesc: 'AI時代の潜在的な成長と自動化のリスクに基づいて仕事を分類。Kaggleからデータを取得し、Pythonとクラスタリング法を用いて分析しました。',
                 projectChemyTitle: 'UI/UX Chemy（配送アプリ）',
-                projectChemyDesc: 'Figmaを使用して配送アプリ「Chemy」のUI/UXデザインを設計。直感的で魅力的なユーザーエクスペリエンスに焦点を当てました。',
+                projectChemyDesc: 'Figmaを使用して配送アプリ「Chemy」のUI/UXデザインを設計。直感的に操作でき、魅力的なユーザーエクスペリエンスに焦点を当てました。',
                 projectCinemaTitle: 'UI/UX映画チケット予約アプリ',
                 projectCinemaDesc: 'オンライン映画チケット予約アプリのFigmaデザインを作成。アクセスしやすさとチケット予約の利便性を向上させました。',
                 projectGraphicTitle: 'グラフィックデザイン',
@@ -630,7 +634,7 @@
             }
         };
 
-        // Function to set the language
+        // Function to set the language and update colors
         function setLanguage(lang) {
             document.documentElement.lang = lang; // Set lang attribute for HTML
             const elements = document.querySelectorAll('[data-key]');
@@ -642,6 +646,71 @@
             });
             // Update page title separately as it's in <head>
             document.title = translations[lang].pageTitle;
+
+            const header = document.getElementById('mainHeader');
+            const mainContent = document.getElementById('mainContent');
+            const footer = document.getElementById('mainFooter');
+            const body = document.body; // Get the body element
+            const primaryButtons = document.querySelectorAll('.btn-primary'); // Get all primary buttons
+            const skillBadges = document.querySelectorAll('.skill-badge'); // Get all skill badges
+
+            if (lang === 'jp') {
+                // Japanese colors: dark red, light red, red, white
+                header.style.backgroundImage = 'linear-gradient(to right, #8B0000, #FF6347)'; // Dark red to light red
+                footer.style.backgroundImage = 'linear-gradient(to right, #8B0000, #FF6347)'; // Dark red to light red
+                mainContent.style.backgroundImage = 'linear-gradient(to bottom, #CD5C5C 0%, #CD5C5C 70%, #ffffff 100%)'; // Red to white
+                body.style.backgroundColor = '#CD5C5C'; // Fill empty space with red
+
+                // Change button colors for Japanese
+                primaryButtons.forEach(button => {
+                    button.style.backgroundColor = '#FF6347'; // Light red for buttons
+                    button.style.color = 'white';
+                });
+
+                // Change skill badge colors for Japanese
+                skillBadges.forEach(badge => {
+                    badge.style.backgroundColor = '#FFDAB9'; // Peach color for background (lighter red tone)
+                    badge.style.color = '#8B0000'; // Dark red for text
+                });
+
+            } else if (lang === 'en') {
+                // English colors: dark purple, light purple, medium purple, lavender
+                header.style.backgroundImage = 'linear-gradient(to right, #4B0082, #9370DB)'; // Dark purple to light purple
+                footer.style.backgroundImage = 'linear-gradient(to right, #4B0082, #9370DB)'; // Dark purple to light purple
+                mainContent.style.backgroundImage = 'linear-gradient(to bottom, #BA55D3 0%, #BA55D3 70%, #ffffff 100%)'; // Medium purple to white
+                body.style.backgroundColor = '#BA55D3'; // Fill empty space with medium purple
+
+                // Change button colors for English
+                primaryButtons.forEach(button => {
+                    button.style.backgroundColor = '#9370DB'; // Light purple for buttons
+                    button.style.color = 'white';
+                });
+
+                // Change skill badge colors for English
+                skillBadges.forEach(badge => {
+                    badge.style.backgroundColor = '#E6E6FA'; // Lavender for background
+                    badge.style.color = '#4B0082'; // Dark purple for text
+                });
+            }
+            else {
+                // Default Manchester City colors (for 'id')
+                header.style.backgroundImage = 'linear-gradient(to right, #06285A, #6caddf)'; // Dark blue to light blue
+                footer.style.backgroundImage = 'linear-gradient(to right, #06285A, #6caddf)'; // Dark blue to light blue
+                mainContent.style.backgroundImage = 'linear-gradient(to bottom, #a0d2f2 0%, #a0d2f2 70%, #ffffff 100%)'; // Light blue to white
+                body.style.backgroundColor = '#a0d2f2'; // Fill empty space with light blue
+
+                // Revert button colors to default
+                primaryButtons.forEach(button => {
+                    button.style.backgroundColor = '#6caddf'; // Light blue for buttons
+                    button.style.color = 'white';
+                });
+
+                // Revert skill badge colors to default
+                skillBadges.forEach(badge => {
+                    badge.style.backgroundColor = '#e0f2fe'; /* Very light blue */
+                    badge.style.color = '#2196f3'; /* A vibrant blue */
+                });
+            }
         }
 
         document.addEventListener('DOMContentLoaded', function() {
