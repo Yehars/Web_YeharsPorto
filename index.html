@@ -155,6 +155,7 @@
                 <button class="btn-primary" onclick="setLanguage('id')">ID</button>
                 <button class="btn-primary" onclick="setLanguage('en')">EN</button>
                 <button class="btn-primary" onclick="setLanguage('jp')">JP</button>
+                <button class="btn-primary" onclick="setLanguage('cn')">CN</button>
             </div>
 
             <!-- User Profile Image -->
@@ -631,6 +632,58 @@
                 contactMeTitle: 'お問い合わせ',
                 contactMeDesc: 'コラボレーションにご興味がありますか、またはご質問がありますか？お気軽にお問い合わせください！',
                 footerText: '&copy; 2025 イェハルス・ダニシュ・イヴァン・ナンロヒー。全著作権所有。'
+            },
+            'cn': {
+                pageTitle: '叶哈尔斯·丹尼斯·伊万·南洛希 作品集',
+                tagline: '对UI/UX、数据分析和平面设计充满热情的计算机信息系统学生。',
+                emailMe: '给我发邮件',
+                aboutMeTitle: '关于我',
+                aboutMeContent: '我是古纳达玛大学信息系统专业大三学生。我在UI/UX网站设计、使用Figma、HTML、CSS、JavaScript和PHP进行网站开发方面拥有经验。此外，我还拥有使用Python、Excel、MySQL进行数据处理以及使用Adobe Photoshop和Canva进行平面设计的经验。我是一个善于沟通、团队合作能力强、解决问题能力强的个体。',
+                skillsTitle: '技能与能力',
+                technicalSkillsTitle: '技术技能',
+                nonTechnicalSkillsTitle: '非技术技能',
+                goodCommunication: '良好沟通',
+                teamwork: '团队合作',
+                problemSolving: '解决问题',
+                adaptability: '适应能力',
+                projectsTitle: '精选项目',
+                projectPortfolioTitle: '个人作品集网站',
+                projectPortfolioDesc: '仅使用HTML和CSS制作的个人作品集网站，包含已取得的成就和经历。',
+                projectSnakeTitle: '诺基亚贪吃蛇游戏',
+                projectSnakeDesc: '使用Java重新制作了诺基亚手机上的经典贪吃蛇游戏。该项目磨练了我对面向对象编程概念的理解。',
+                projectNewsTitle: '新闻网站',
+                projectNewsDesc: '专注于游戏技术和足球的新闻网站开发。结合使用HTML、CSS、JavaScript和PHP实现完整功能。',
+                projectGooglePlayTitle: 'Google Play商店应用数据分析',
+                projectGooglePlayDesc: '分析应用流行模式，作为应用开发的考量。数据取自Kaggle，并使用Python在Google Colab中通过逻辑回归方法进行分析。',
+                projectDivorceTitle: '印度尼西亚离婚分析',
+                projectDivorceDesc: '根据各省因素分析印度尼西亚的离婚情况，作为印度尼西亚离婚保险开发的初始阶段。数据取自BPS，并使用Python通过线性回归方法进行处理。',
+                projectAITitle: 'AI时代就业前景分析',
+                projectAIDesc: '根据AI时代的潜在增长和自动化风险对工作进行聚类。数据取自Kaggle，并使用Python通过聚类方法进行分析。',
+                projectChemyTitle: 'UI/UX Chemy (配送应用)',
+                projectChemyDesc: '使用Figma为名为Chemy的配送应用设计UI/UX。专注于直观且吸引人的用户体验。',
+                projectCinemaTitle: 'UI/UX 电影票预订应用',
+                projectCinemaDesc: '使用Figma为在线电影票预订应用创建设计。提高了预订票的便捷性和用户便利性。',
+                projectGraphicTitle: '平面设计',
+                projectGraphicDesc: '使用Adobe Photoshop和Canva为各种目的创作的各种平面设计。展示了创造力和可视化技能。',
+                imageNotAvailable: '图片不可用',
+                educationTitle: '教育背景',
+                universityName: '古纳达玛大学',
+                degree: '信息系统学士 (GPA: 3.43)',
+                educationYears: '2022年 - 至今',
+                organizationExpTitle: '组织经验',
+                kmkTitle: 'KMK古纳达玛',
+                kmkRole: '区域协调员 (2023/2024)',
+                kmkDuty1: '管理区域内成员之间的沟通和协调。',
+                kmkDuty2: '协助组织内部和外部活动。',
+                committeeTitle: '2022年圣诞委员会 & 2023年PKKMB委员会, 2024年PKKMB',
+                committeeRole: '设备部门 (2022年 - 至今)',
+                committeeDuty1: '管理并协调其他部门，处理活动所需的所有设备（采购、管理、设备回收）。',
+                committeeDuty2: '创建/记录所需设备清单，并进行盘点，确保活动前后设备可用。',
+                committeeDuty3: '与各部门及组织核心管理层讨论并沟通所需设备。',
+                committeeDuty4: '创建活动前后设备回收、使用和归还报告。',
+                contactMeTitle: '联系我',
+                contactMeDesc: '有兴趣合作或有疑问？请随时联系我！',
+                footerText: '© 2025 叶哈尔斯·丹尼斯·伊万·南洛希。保留所有权利。'
             }
         };
 
@@ -690,6 +743,24 @@
                 skillBadges.forEach(badge => {
                     badge.style.backgroundColor = '#E6E6FA'; // Lavender for background
                     badge.style.color = '#4B0082'; // Dark purple for text
+                });
+            } else if (lang === 'cn') {
+                // Chinese colors: dark green, light green, pale green, white
+                header.style.backgroundImage = 'linear-gradient(to right, #006400, #90EE90)'; // Dark green to light green
+                footer.style.backgroundImage = 'linear-gradient(to right, #006400, #90EE90)'; // Dark green to light green
+                mainContent.style.backgroundImage = 'linear-gradient(to bottom, #ffffff 0%, #F0FFF0 30%, #98FB98 100%)'; // White dominant, then fades to pale green
+                body.style.backgroundColor = '#98FB98'; // Fill empty space with pale green
+
+                // Change button colors for Chinese
+                primaryButtons.forEach(button => {
+                    button.style.backgroundColor = '#90EE90'; // Light green for buttons
+                    button.style.color = 'white';
+                });
+
+                // Change skill badge colors for Chinese
+                skillBadges.forEach(badge => {
+                    badge.style.backgroundColor = '#F0FFF0'; // Honeydew for background (very light green)
+                    badge.style.color = '#006400'; // Dark green for text
                 });
             }
             else {
